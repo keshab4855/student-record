@@ -1,0 +1,12 @@
+body {
+  background: rgb(224, 180, 97);
+}
+
+.main-heading {
+  margin: 5px auto 5px auto;
+  color: rgba(62, 76, 235, 0.955);
+}
+.heading {
+  display: flex;
+  align-items: center;
+}
