@@ -20,20 +20,22 @@
         </div>
 
         <!-- form -->
-        <form class="container" action="javascript:void(0)" onsubmit="submitHandler(event) ">
+        <form class="container" action="javascript:void(0)" onsubmit="handleOnSubmit(this)">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Full Name</label>
-                <input type="text" class="form-control name-input" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="text" class="form-control name-input" name="fullname" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
 
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
+                <input type="email" class="form-control" name="email" id="exampleInputEmail2"
+                    aria-describedby="emailHelp">
 
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Status</label>
-                <input type="text" class="form-control" id="exampleInputPassword1">
+                <input type="text" class="form-control" name="status" id="exampleInputPassword1">
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -49,25 +51,14 @@
                     <th scope="col">Status</th>
                 </tr>
             </thead>
-            <tbody class="table-group-divider">
-                <tr class="students-details">
+            <tbody class="table-group-divider" id="insert-table">
+                <!-- <tr class="students-details">
                     <th scope="row">1</th>
                     <td class="name">Mark</td>
                     <td class="email">mark123@gamil.com</td>
                     <td class="status">Present</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>mark123@gamil.com</td>
-                    <td>absent</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Jacob</td>
-                    <td>mark123@gamil.com</td>
-                    <td>present</td>
-                </tr>
+                </tr> -->
+
             </tbody>
         </table>
     </div>

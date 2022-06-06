@@ -1,27 +1,29 @@
-const inputName = document.querySelector(".name-input");
-
-const inputEmail = document.getElementById("exampleInputEmail2");
-
-let studentsArr = [];
-
-const submitHandler = (e) => {
-  display();
+const studentList = [];
+const handleOnSubmit = (e) => {
+  const formDt = new FormData(e);
+  const name = formDt.get("fullname");
+  const email = formDt.get("email");
+  const status = formDt.get("status");
+  const obj = {
+    name,
+    email,
+    status,
+  };
+  studentList.push(obj);
+  display(studentList);
 };
-const display = () => {
-  // const nameVal = inputName.value;
-  // const emailVal = inputEmail.value;
-  // document.querySelector(".name").innerHTML = nameVal;
-  // document.querySelector(".email").innerHTML = emailVal;
-  let str = "";
-  studentsArr.map(() => {
-    str += `
 
-                    <th scope="row">1</th>
-                    <td class="name">Mark</td>
-                    <td class="email">mark123@gamil.com</td>
-                    <td class="status">Present</td>
-              
-  `;
+const display = (studentArr) => {
+  let str = "";
+  studentArr.map((item, i) => {
+    str += `
+      <tr class="students-details">
+                    <th scope="row">${i}</th>
+                    <td class="name">${item.name}</td>
+                    <td class="email">${item.email}</td>
+                    <td class="status">${item.status}</td>
+                </tr>
+    `;
   });
-  document.querySelector(".students-details").innerHTML = str;
+  document.getElementById("insert-table").innerHTML = str;
 };
