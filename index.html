@@ -16,7 +16,7 @@
 <body>
     <div class="wrapper cotainer mt-4">
         <div class="heading">
-            <h1 class="main-heading">Attendance</h1>
+            <h1 class="main-heading">Student record</h1>
         </div>
 
         <!-- form -->
@@ -24,21 +24,26 @@
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Full Name</label>
                 <input type="text" class="form-control name-input" name="fullname" id="exampleInputEmail1"
-                    aria-describedby="emailHelp">
+                    aria-describedby="emailHelp" placeholder="Enter student full name">
 
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
                 <input type="email" class="form-control" name="email" id="exampleInputEmail2"
-                    aria-describedby="emailHelp">
+                    aria-describedby="emailHelp" placeholder="Enter student email-address">
 
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Status</label>
-                <input type="text" class="form-control" name="status" id="exampleInputPassword1">
+                <label for="exampleInputPassword1" class="form-label">Contact Number</label>
+                <input type="text" class="form-control" name="number" id="exampleInputPassword1" placeholder="+61">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Student Number</label>
+                <input type="number" class="form-control" name="student-number" id="exampleInputPassword1"
+                    placeholder="00003313">
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Add student</button>
         </form>
 
         <!-- table -->
@@ -48,7 +53,8 @@
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Status</th>
+                    <th scope="col">Contact number</th>
+                    <th scope="col">Student number</th>
                 </tr>
             </thead>
             <tbody class="table-group-divider" id="insert-table">
