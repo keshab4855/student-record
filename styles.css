@@ -10,3 +10,13 @@ body {
   display: flex;
   align-items: center;
 }
+
+.buttons {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.edit-button {
+  background: rgb(224, 180, 97);
+  border: none;
+}

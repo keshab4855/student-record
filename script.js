@@ -1,4 +1,4 @@
-const studentList = [];
+let studentList = [];
 const handleOnSubmit = (e) => {
   const formDt = new FormData(e);
   const name = formDt.get("fullname");
@@ -25,8 +25,19 @@ const display = (studentArr) => {
                     <td class="email">${item.email}</td>
                     <td class="status">${item.number}</td>
                     <td class="status">${item.studentNumber}</td>
+                    <td class="buttons"><button class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></button><button onclick=(onDeleteHandler(${i})) class="btn btn-danger"><i class="fa-solid fa-trash-can"></i> </button> </td>
+                  
+                    
                 </tr>
     `;
   });
   document.getElementById("insert-table").innerHTML = str;
+};
+
+const onDeleteHandler = (i) => {
+  const filteredArr = studentList.filter((item, index) => i !== index);
+  console.log(filteredArr);
+
+  studentList = filteredArr;
+  display(studentList);
 };
