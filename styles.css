@@ -20,3 +20,7 @@ body {
   background: rgb(224, 180, 97);
   border: none;
 }
+
+.search {
+  gap: 10px;
+}

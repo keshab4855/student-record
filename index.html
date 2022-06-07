@@ -18,19 +18,23 @@
         <div class="heading">
             <h1 class="main-heading">Student record</h1>
         </div>
+        <div class="search container mb-5 d-flex">
+            <input type="text" class="form-control" onkeyup="handleOnSearch(this)" name="email" id="search-btn"
+                aria-describedby="emailHelp" placeholder="Search for students">
 
+        </div>
         <!-- form -->
         <form class="container" action="javascript:void(0)" onsubmit="handleOnSubmit(this)">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Full Name</label>
-                <input type="text" class="form-control name-input" name="fullname" id="exampleInputEmail1"
-                    aria-describedby="emailHelp" placeholder="Enter student full name">
+                <input onsubmit="handleOnSubmit(this)" type="text" class="form-control name-input" name="fullname"
+                    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Full name">
 
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
                 <input type="email" class="form-control" name="email" id="exampleInputEmail2"
-                    aria-describedby="emailHelp" placeholder="Enter student email-address">
+                    aria-describedby="emailHelp" placeholder="Email-address">
 
             </div>
             <div class="mb-3">
@@ -43,7 +47,7 @@
                     placeholder="00003313">
             </div>
 
-            <button type="submit" class="btn btn-primary">Add student</button>
+            <button type="submit" class="btn btn-primary" id="add-student">Add student</button>
         </form>
 
         <!-- table -->
